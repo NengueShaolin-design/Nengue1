@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho</title>
+    <link rel="stylesheet" href="Trabalho.css">
+    <style>
+        header {
+            background-color: #1B5368;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            background-color: #FFFFFF;
+            color: #1B5368;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 5px solid #1B5368; /* Alterado para contraste */
+            padding: 16px;
+        }
+        .artigo-autor {
+            font-style: italic;
+            font-weight: bold;
+        }
+        img {
+            max-width: 100%;
+            height: auto; /* Evita distorcer a imagem */
+            display: block;
+            margin: 15px auto;
+        }
+        ul, ol {
+            text-align: left;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Título Principal do Site</h1>
+    </header>
+
+    <main>
+        <div class="texto">
+            <h2>Subtítulo</h2>
+            <p class="artigo-autor">por: Marcelo</p>
+            <h3>Outro nível de título</h3>
+            <p>Este é um parágrafo de texto.</p>
+            <p>Podemos escrever quantos parágrafos quisermos.</p>
+        </div>
+
+        <div class="links-midia">
+            <a href="https://www.wikipedia.org" target="_blank">Acessar o site</a>
+            <img src="imagem de tecnologia.webp" alt="Descrição da imagem">
+        </div>
+
+        <ul>
+            <li>Computador</li>
+            <li>Teclado</li>
+            <li>Mouse</li>
+        </ul>
+
+        <ol>
+            <li>Primeiro passo</li>
+            <li>Segundo passo</li>
+            <li>Terceiro passo</li>
+        </ol>
+
+        <div class="interacao">
+            <p>Este conteúdo está dentro de uma divisão.</p>
+            <button id="meuBotao">🌕🌕🌕 <span>0</span></button>
+        </div>
+    </main>
+
+    <script>
+        // Correção do seletor e do evento
+        const botao = document.querySelector("#meuBotao");
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            // Correção de textoContent para textContent
+            texto.textContent = parseInt(texto.textContent) + 1;
+        }
+    </script>
+</body>
+</html>
